@@ -14,7 +14,7 @@ const conversations = useState("conversations",() => ref([]))
 const question = ref('')
 
 async function getAnswer() {
-    return await $fetch(`http://ext.lakm.us:8080/api/v2/${aiName.value}/${question.value}`)
+    return await $fetch(`https://ext.lakm.us:8080/api/v2/${aiName.value}/${question.value}`)
 }
 
 async function displayAnswer() {
