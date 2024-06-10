@@ -23,7 +23,6 @@ defineProps({
         </template>
     </UCard>
 </template>
-
 <style scoped>
 .card-header {
     display: flex;

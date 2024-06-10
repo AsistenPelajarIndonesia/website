@@ -1,9 +1,6 @@
-<template>
-    <div>
-      <AppNavbar />
-      <slot />
-    </div>
-  </template>
+<template>      
+    <slot />
+</template>
 
 <style>
 

@@ -1,8 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { defineNuxtConfig } from 'nuxt/config'
 export default defineNuxtConfig({
+  ssr: false,
   devtools: { enabled: true },
-  modules: ['@vite-pwa/nuxt', "@nuxt/ui"],
+  modules: ['@vite-pwa/nuxt', '@nuxt/ui'],
   pwa: {
     name: "Asisten Pelajar Indonesia",
     short_name: "API",

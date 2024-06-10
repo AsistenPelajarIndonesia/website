@@ -44,7 +44,7 @@ main {
     background-position: center center;
     position: relative;
 }
-.content{
+.content {
     width: 100%;
     position: absolute;
     top: 50%;
@@ -53,18 +53,18 @@ main {
     color: #fff;
 }
 
-.content h1{
+.content h1 {
     font-size: 40px;
     margin-top: 80px;
 }
 
-.content p{
+.content p {
     margin: 20px auto;
     font-weight: 100;
     line-height: 25px;
 }
 
-button{
+button {
     width:200px;
     padding: 15px 0;
     text-align:center;
@@ -78,7 +78,7 @@ button{
     position: relative;
     overflow: hidden;
 }
-span{
+span {
     background: crimson;
     height: 100%;
     width: 0%;
@@ -89,10 +89,10 @@ span{
     z-index: -1;
     transition: 0.5s;
 }
-button:hover span{
+button:hover span {
     width: 100%;
 }
-button:hover{
+button:hover {
     border: none;
 }
 </style>
