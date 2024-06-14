@@ -1,15 +1,15 @@
 <template>
-    <main>
+    <main class="soal">
         <UContainer>
-            {{ selectedAnswer }}
             <article class="input-group">
-                <UInput color="primary" variant="outline" placeholder="Masukan soal yang ingin dibuat!" v-model="topic" />
+                <UInput class="topic" color="primary" variant="outline" placeholder="Masukan soal yang ingin dibuat!" v-model="topic" />
                 <article class="submit-group">
                 <USelectMenu v-model="selectedLanguage" :options="languages">
                     <template #leading>
                     <UAvatar v-if="selectedLanguage.avatar" v-bind="(selectedLanguage.avatar as Avatar)" size="2xs" />
                     </template>
                 </USelectMenu>
+                <USelect v-model="questionCount" :options="questionCounts" />
                 <UButton color="primary" variant="solid" @click="displayQuestions">Buat Soal</UButton>
                 </article>
             </article>
@@ -25,7 +25,7 @@
 
                 </UCard>
             </section>
-            <aside>
+            <aside class="actions" v-show="questionReceived">
                 <UButton @click="show_answers">Cek Jawaban</UButton>
                 <UButton color="blue">Save Soal</UButton>
             </aside>
@@ -64,49 +64,65 @@ import type { Avatar } from '#ui/types'
 const languages = [{
   id: 'Bahasa Indonesia',
   label: 'Bahasa Indonesia',
-  href: 'https://github.com/benjamincanac',
   target: '_blank',
   avatar: { src: 'https://upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_Indonesia.svg' }
 }, {
   id: 'Bahasa Inggris',
   label: 'Bahasa Inggris',
-  href: 'https://github.com/Atinux',
   target: '_blank',
   avatar: { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/United-states_flag_icon_round.svg/1024px-United-states_flag_icon_round.svg.png' }
 }, {
   id: 'Bahasa Sunda',
-  label: 'Bahasa Sunda',
-  href: 'https://github.com/smarroufin',
+  label: "Bahasa Sunda",
   target: '_blank',
-  avatar: { src: '/assets/7.png' }
+  avatar: { src: '/sundanese.png' }
 }]
 const topic = ref()
+const questionReceived = ref(false)
 
+const questionCounts = [5, 10, 15, 20, 25, 30, 40]
+const questionCount = ref(questionCounts[0])
 const questions = ref()
-async function getQuestions() {
-    return await $fetch(`https://ext.lakm.us:8080/api/v2/soal/${topic.value}/10`)
-}
 
+const language = ref(languages[1].id)
 const selectedAnswer = ref([])
 async function displayQuestions() {
     const get_questions = await getQuestions()
     questions.value = get_questions
+    questionReceived.value = !questionReceived.value
 }
 const selectedLanguage = ref(languages[0])
 const showed_answer = ref(false)
 const show_answers = ref(() => {
     showed_answer.value = !showed_answer.value
 })
-
+async function getQuestions() {
+    return await $fetch(`https://ext.lakm.us:8080/api/v2/soal/${topic.value}/${questionCount.value}`)
+}
 </script>
 
 <style>
+.topic {
+    margin-bottom: 0.5rem;
+}
+.soal {
+    margin-top: 2rem;
+    margin-left: 5vw;
+    margin-right: 5vw;
+
+}
 .input-group {
     display: flex;
     flex-direction: column;
 }
 .submit-group {
     display: flex;
+}
+@media only screen and (max-width: 600px) {
+    .submit-group {
+        flex-direction: column;
+        gap: 0.2rem;
+    }
 }
 </style>
 

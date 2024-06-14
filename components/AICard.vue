@@ -31,16 +31,16 @@ const props = defineProps({
 
 .card {
     width: 350px;
-    height: 400px;
+    min-height: 500px;
     border-radius: 20px;
     overflow: hidden;
     border: 4px solid #fff;
     position: relative;
-    z-index:0;
+    z-index: 0;
 }
 .card-img {
     width: 100%;
-    height: 100%;
+    height: 500px;
     object-fit: cover;
 }
 

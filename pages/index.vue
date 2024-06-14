@@ -5,32 +5,40 @@ useHead({
     { name: 'Halaman Utama', content: 'Halaman utama asisten pelajar indonesia' }
   ],
 })
+const onClick = async () => 
+  await navigateTo('https://nuxt.com', {
+  external: true
+  })
+const layout = "basic";
+
 </script>
 <template>
-    <main>
-      <div class="content">
-            <h1>BELAJAR BERSAMA AI</h1>
-            <p>
-              Membawa Pelajar Ke Dunia Baru
-              <br>
-              Asisten Pelajar Indonesia
-            </p>
-            <div>
-                <NuxtLink to="/ai">
-                  <button>
-                    <span></span>
-                    TANYA AI
-                  </button>
-                </NuxtLink>
-                <NuxtLink to="/">
-                  <button>
-                    <span></span>
-                    PERSONALITY TEST
-                  </button>
-                </NuxtLink>
-            </div>
-        </div>
-    </main>
+    <NuxtLayout :name="layout">
+      <main>
+        <div class="content">
+              <h1>BELAJAR BERSAMA AI</h1>
+              <p>
+                Membawa Pelajar Ke Dunia Baru
+                <br>
+                Asisten Pelajar Indonesia
+              </p>
+              <div>
+                  <NuxtLink to="/ai">
+                    <button>
+                      <span></span>
+                      TANYA AI
+                    </button>
+                  </NuxtLink>
+                  <NuxtLink to="/">
+                    <button>
+                      <span></span>
+                      PERSONALITY TEST
+                    </button>
+                  </NuxtLink>
+              </div>
+          </div>
+      </main>
+    </NuxtLayout>
 </template>
 
 <style scoped>

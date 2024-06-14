@@ -9,7 +9,7 @@ useHead({
 </script>
 
 <template>
-    <main class="cards"  style="background-color: #222;">
+    <main class="cards">
         <AICard 
             title="NeuralNex" 
             heading="NeuralNex" 
@@ -34,7 +34,6 @@ useHead({
             description="AI ini bisa digunakan untuk sehari hari, yang dimana AI ini salah satu untuk bisa membawa dampak positif dan meningkatkan relevansi konten yang di sajikan dan menganalisis prefensi pengguna dan memberikan rekomendasi yang sesuai"
             link="/"
         />
-
     </main>
 </template>
 
@@ -45,6 +44,7 @@ useHead({
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: #222;
 }
 @media only screen and (max-width: 600px) {
   .cards {

@@ -12,6 +12,7 @@ const closeSidebar = () => {
             <nav class="wrapper">
                 <ul class="navigation">
                     <NuxtLink class="navbar-item" to="/">Beranda</NuxtLink>
+                    <NuxtLink class="navbar-item" to="/soal">Pembuat Soal</NuxtLink>
                     <NuxtLink class="navbar-item" to="/ai">Kumpulan AI</NuxtLink>
                     <NuxtLink class="navbar-item" to="/productivity">Produktifitas</NuxtLink>
                     <NuxtLink class="navbar-item" to="/personality-test">Tes Kepribadian</NuxtLink>

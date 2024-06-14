@@ -12,9 +12,9 @@ useHead({
 <template>
     <main class="ai">
         <article  class="cards">
-            <AITypeCard link="/" photo="/images/teacher-icon.png" role="Guru" message="Asisten Guru"/>
-            <AITypeCard link="/" photo="/images/universal-icon.png" role="Sehari-Hari" message="Asisten Universal"/>
-            <AITypeCard link="/" photo="/images/student-icon.png" role="Pelajar" message="Asisten Pelajar"/>
+            <AITypeCard link="/teacher" photo="/images/teacher-icon.png" role="Guru" message="Asisten Guru"/>
+            <AITypeCard link="/universal" photo="/images/universal-icon.png" role="Sehari-Hari" message="Asisten Universal"/>
+            <AITypeCard link="/student" photo="/images/student-icon.png" role="Pelajar" message="Asisten Pelajar"/>
         </article> 
     </main>
 </template>
