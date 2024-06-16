@@ -71,33 +71,30 @@ const languages = [{
   label: 'Bahasa Inggris',
   target: '_blank',
   avatar: { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/United-states_flag_icon_round.svg/1024px-United-states_flag_icon_round.svg.png' }
-}, {
-  id: 'Bahasa Sunda',
-  label: "Bahasa Sunda",
-  target: '_blank',
-  avatar: { src: '/sundanese.png' }
-}]
+},
+]
 const topic = ref()
 const questionReceived = ref(false)
 
 const questionCounts = [5, 10, 15, 20, 25, 30, 40]
 const questionCount = ref(questionCounts[0])
 const questions = ref()
-
-const language = ref(languages[1].id)
-const selectedAnswer = ref([])
-async function displayQuestions() {
-    const get_questions = await getQuestions()
-    questions.value = get_questions
-    questionReceived.value = !questionReceived.value
-}
-const selectedLanguage = ref(languages[0])
+const selectedLanguage = ref(languages[1])
 const showed_answer = ref(false)
 const show_answers = ref(() => {
     showed_answer.value = !showed_answer.value
 })
+
+const selectedAnswer = ref([])
+async function displayQuestions() {
+    selectedAnswer.value = []
+    const get_questions = await getQuestions()
+    questions.value = get_questions
+    questionReceived.value = true
+    showed_answer.value = false
+}
 async function getQuestions() {
-    return await $fetch(`https://ext.lakm.us:8080/api/v2/soal/${topic.value}/${questionCount.value}`)
+    return await $fetch(`https://ext.lakm.us:8080/api/v2/soal/${topic.value}/${questionCount.value}/${selectedLanguage.value.label}`)
 }
 </script>
 
