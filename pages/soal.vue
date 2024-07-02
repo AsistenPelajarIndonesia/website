@@ -14,7 +14,7 @@
                 </article>
             </article>
             <section>
-                <UCard  style="margin-top: 1rem;" v-for="question of questions">
+                <UCard style="margin-top: 1rem;background-color: #2F3645;" v-for="question of questions">
                     <template #header>
                         {{ question.question }}?
                     </template>
@@ -103,10 +103,9 @@ async function getQuestions() {
     margin-bottom: 0.5rem;
 }
 .soal {
-    margin-top: 2rem;
-    margin-left: 5vw;
-    margin-right: 5vw;
-
+    padding-top: 2rem;
+    padding-left: 5vw;
+    padding-right: 5vw;
 }
 .input-group {
     display: flex;
