@@ -18,7 +18,7 @@ const layout = "basic"
               photo="/images/robot-8.jpg"
               subheading="Rancang strategi mengajar untuk guru" 
               description="Asisten yang akan membantu dalam kegiatan menstrategikan dan mendapatkan solusi untuk kegiatan mengajar" 
-              link="/"
+              link="/siasat-ngajar"
           />
       </main>
   </NuxtLayout>

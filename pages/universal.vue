@@ -34,7 +34,7 @@ const layout = "basic"
             photo="/Warta Palsu.png"
             subheading="Pendeteksi Hoax"
             description="Apakah ini berita palsu atau bukan? Dengan adanya 'Warta Palsu?' anda dapat mengecek kebeneran berita dengan kecerdasan buatan!"
-            link="/hoax"
+            link="/chats/hoax"
         />
     </main>
   </NuxtLayout>
