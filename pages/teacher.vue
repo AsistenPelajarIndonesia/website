@@ -6,28 +6,22 @@ useHead({
     { name: 'Halaman guru API', content: 'Halaman guru asisten pelajar indonesia' }
   ],
 })
+const layout = "basic"
 </script>
 
 <template>
-    <main class="cards"  style="background-color: #222;">
-        <AICard 
-            title="Solution AI" 
-            heading="Solution AI" 
-            photo="/images/robot-7.jpg"
-            subheading="Chat Untuk Mendapatkan Solusi!" 
-            description="" 
-            link="/"
-        />
-        <AICard
-            title="Quantum IQ"
-            heading="Quantum IQ"
-            photo="/images/robot-8.jpg"
-            subheading="Membantu pembuatan strategi mengajar!s" 
-            description="AI ini dapat digunakan oleh guru untuk membuat strategi mengajar dan dapat memilih materi yang akan dibahas kepada murid untuk kedepannya, jadi AI ini bisa menjadi solusi untuk guru terutama dalam mengajar" 
-            link="/"
-        />
-
-    </main>
+    <NuxtLayout :name="layout">
+      <main class="cards"  style="background-color: #222;">
+          <AICard
+              title="Siasat Ngajar"
+              heading="Siasat Ngajar"
+              photo="/images/robot-8.jpg"
+              subheading="Rancang strategi mengajar untuk guru" 
+              description="Asisten yang akan membantu dalam kegiatan menstrategikan dan mendapatkan solusi untuk kegiatan mengajar" 
+              link="/"
+          />
+      </main>
+  </NuxtLayout>
 </template>
 
 

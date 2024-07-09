@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBTI Personality Test</title>
+</head>
+<body>
+    <h1>MBTI Personality Test</h1>
+    <form id="personality-test-form">
+        {% for question in questions %}
+        <div>
+            <p>{{ question.text }}</p>
+            <input type="radio" name="q{{ question.id }}" value="E"> E
+            <input type="radio" name="q{{ question.id }}" value="I"> I
+            <input type="radio" name="q{{ question.id }}" value="S"> S
+            <input type="radio" name="q{{ question.id }}" value="N"> N
+            <input type="radio" name="q{{ question.id }}" value="T"> T
+            <input type="radio" name="q{{ question.id }}" value="F"> F
+            <input type="radio" name="q{{ question.id }}" value="J"> J
+            <input type="radio" name="q{{ question.id }}" value="P"> P
+        </div>
+        {% endfor %}
+        <button type="button" onclick="submitAnswers()">Submit</button>
+    </form>
+    <div id="result"></div>
+    <script>
+        function submitAnswers() {
+            const form = document.getElementById('personality-test-form');
+            const formData = new FormData(form);
+            const answers = [];
+
+            {% for question in questions %}
+            const answer = formData.get('q{{ question.id }}');
+            answers.push(answer);
+            {% endfor %}
+
+            fetch('/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ answers: answers })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    document.getElementById('result').innerText = data.error;
+                } else {
+                    document.getElementById('result').innerText = "Your personality type is: " + data.personality_type;
+                }
+            });
+        }
+    </script>
+</body>
+</html>
