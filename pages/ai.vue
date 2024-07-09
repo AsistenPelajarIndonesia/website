@@ -23,7 +23,7 @@ useHead({
 <style scoped>
 .ai {
     background-color: #222;
-    min-height: 150vh;
+    min-height: 100vh;
 }
 .cards {
     padding: 100px;
@@ -31,7 +31,10 @@ useHead({
     align-items: center;
     justify-content: space-between;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
+  .ai {
+    min-height: 150vh;
+  }
   .cards {
     flex-direction: column;
     height: 120vh;

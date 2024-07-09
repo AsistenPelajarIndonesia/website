@@ -14,8 +14,8 @@ const props = defineProps({
         <h2 class="card-title">{{ title }}</h2>
         <img :src="`${photo}`" class="card-img" alt="illustrations">
         <div class="card-body">
-            <h1 class="card-heading">{{ heading }}</h1>
-            <h2 class="card-subheading">{{ subheading }}</h2>
+            <h1 style="font-size: 3rem;" class="card-heading">{{ heading }}</h1>
+            <h2 style="font-size: 1.3rem;" class="card-subheading">{{ subheading }}</h2>
             <p class="card-description">{{ description }}</p>
             <NuxtLink :to="`${link}`">
                 <button class="card-button">Gunakan</button>
@@ -31,7 +31,7 @@ const props = defineProps({
 
 .card {
     width: 350px;
-    min-height: 500px;
+    min-height: 25rem;
     border-radius: 20px;
     overflow: hidden;
     border: 4px solid #fff;
@@ -40,7 +40,7 @@ const props = defineProps({
 }
 .card-img {
     width: 100%;
-    height: 500px;
+    height: 25rem;
     object-fit: cover;
 }
 

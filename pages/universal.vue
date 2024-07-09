@@ -6,35 +6,38 @@ useHead({
     { name: 'Halaman universal API', content: 'Halaman universal asisten pelajar indonesia' }
   ],
 })
+const layout = "basic"
 </script>
 
 <template>
+    <NuxtLayout :name="layout">
     <main class="cards">
         <AICard 
-            title="NeuralNex" 
-            heading="NeuralNex" 
+            title="Hiji Ka Hiji" 
+            heading="Hiji Ka Hiji" 
             photo="/images/robot-6.jpg"
-            subheading="AI Sehari-hari" 
-            description="AI ini bisa digunakan untuk sehari hari, yang dimana AI ini salah satu untuk bisa membawa dampak positif dan meningkatkan relevansi konten yang di sajikan dan menganalisis prefensi pengguna dan memberikan rekomendasi yang sesuai"
+            subheading="Teman mengobrol" 
+            description="Butuh teman untuk berbicara dan berbagi isi pikiran? Kecerdasan Buatan ini akan berusaha untuk membantumu untuk hal tersebut!"
             link="/"
         />
         <AICard
-            title="VirtuGen"
-            heading="VirtuGen"
+            title="PPT Gen"
+            heading="PPT Gen"
             photo="/images/robot-5.jpg"
-            subheading="Pembuat presentasi secara otomatis" 
-            description="AI ini bisa digunakan untuk membuat Power Point yang dimana bisa membuat Power Point otomatis jika sudah memberi materi kepada AI nya"
+            subheading="Bikin PPT Dipermudah" 
+            description="Kecerdasan buatan digunakan untuk membuat Power Point yang secara otomatis hanya dengan memberikan materi kepadanya"
             link="/"
         />
         <AICard 
-            title="OptiMind AI"
-            heading="OptiMind AI"
+            title="Warta Palsu?"
+            heading="Warta Palsu?"
             photo="/images/robot-4.jpg"
-            subheading="AI Sehari-hari"
-            description="AI ini bisa digunakan untuk sehari hari, yang dimana AI ini salah satu untuk bisa membawa dampak positif dan meningkatkan relevansi konten yang di sajikan dan menganalisis prefensi pengguna dan memberikan rekomendasi yang sesuai"
+            subheading="Pendeteksi Hoax"
+            description="Apakah ini berita palsu atau bukan? Dengan adanya 'Warta Palsu?' anda dapat mengecek kebeneran berita dengan kecerdasan buatan!"
             link="/"
         />
     </main>
+  </NuxtLayout>
 </template>
 
 

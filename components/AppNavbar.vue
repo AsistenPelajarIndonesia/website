@@ -29,8 +29,8 @@ const closeSidebar = () => {
         <ul class="sidebar" v-show="isSidebarOpened">
             <i class="ph ph-x close-sidebar-icon" @click="isSidebarOpened = false"></i> 
             <NuxtLink class="sidebar-item" @click="closeSidebar" to="/">Beranda</NuxtLink>
+            <NuxtLink class="sidebar-item" @click="closeSidebar" to="/Soal">Pembuat Soal</NuxtLink>
             <NuxtLink class="sidebar-item" @click="closeSidebar" to="/ai">Kumpulan AI</NuxtLink>
-            <NuxtLink class="sidebar-item" @click="closeSidebar" to="/productivity">Produktifitas</NuxtLink>
             <NuxtLink class="sidebar-item" @click="closeSidebar" to="/personality-test">Tes Kepribadian</NuxtLink>
             <NuxtLink class="sidebar-item" @click="closeSidebar" to="/learning-path-test">Tes Jalur Belajar</NuxtLink>
             <hr class="sidebar-divider">

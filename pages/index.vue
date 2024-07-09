@@ -22,17 +22,17 @@ const layout = "basic";
                 <br>
                 Asisten Pelajar Indonesia
               </p>
-              <div>
-                  <NuxtLink to="/ai">
+              <div class="buttons-wrap">
+                  <NuxtLink to="/ai" class="button-wrap">
                     <button>
                       <span></span>
-                      TANYA AI
+                      <div>Tanya AI</div>
                     </button>
                   </NuxtLink>
-                  <NuxtLink to="/">
+                  <NuxtLink to="/soal" class="button-wrap">
                     <button>
                       <span></span>
-                      PERSONALITY TEST
+                      <div>Buat Soal</div>
                     </button>
                   </NuxtLink>
               </div>
@@ -42,15 +42,26 @@ const layout = "basic";
 </template>
 
 <style scoped>
+* {margin: 0; padding: 0;}
 main {
   background-image: url("/bg.jpeg");
       font-family: sans-serif;
 
-  height: 100vh;
+  height: 100%;
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center center;
     position: relative;
+}
+.button-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buttons-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .content {
     width: 100%;
@@ -64,27 +75,38 @@ main {
 .content h1 {
     font-size: 40px;
     margin-top: 80px;
+    font-weight:bold;
+
 }
 
 .content p {
     margin: 20px auto;
     font-weight: 100;
     line-height: 25px;
+    
 }
 
 button {
-    width:200px;
+    width: 11rem;
     padding: 15px 0;
     text-align:center;
-    margin:20 px 10 px;
+    margin: 1rem 0.5rem;
+    padding: 1.37rem;
     border-radius:25px;
-    font-weight:bold;
     border: 2px solid crimson;
-    background: transparent;
-    color:#fff;
+    background: rgb(154, 7, 37);
     cursor: pointer;
     position: relative;
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button div {
+  font-weight:bold;
+  color:#fff;
+  z-index: 4;
+  position: absolute;
+
 }
 span {
     background: crimson;
@@ -94,7 +116,7 @@ span {
     position: absolute;
     left: 0;
     bottom: 0;
-    z-index: -1;
+    z-index:2;
     transition: 0.5s;
 }
 button:hover span {
@@ -102,5 +124,13 @@ button:hover span {
 }
 button:hover {
     border: none;
+}
+@media only screen and (max-width: 600px) {
+    .buttons-wrap {
+      flex-direction: column;
+    }
+    button {
+      margin: 0.3rem 0.5rem;
+    }
 }
 </style>
