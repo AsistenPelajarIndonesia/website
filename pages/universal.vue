@@ -18,7 +18,7 @@ const layout = "basic"
             photo="/Hiji Ka Hiji.png"
             subheading="Teman mengobrol" 
             description="Butuh teman untuk berbicara dan berbagi isi pikiran? Kecerdasan Buatan ini akan berusaha untuk membantumu untuk hal tersebut!"
-            link="/"
+            link="/hiji-ka-hiji"
         />
         <AICard
             title="PPT Gen"
@@ -26,7 +26,7 @@ const layout = "basic"
             photo="/Coming Soon.png"
             subheading="Bikin PPT Dipermudah" 
             description="Kecerdasan buatan digunakan untuk membuat Power Point yang secara otomatis hanya dengan memberikan materi kepadanya"
-            link="/"
+            link=""
         />
         <AICard 
             title="Warta Palsu?"
@@ -34,7 +34,7 @@ const layout = "basic"
             photo="/Warta Palsu.png"
             subheading="Pendeteksi Hoax"
             description="Apakah ini berita palsu atau bukan? Dengan adanya 'Warta Palsu?' anda dapat mengecek kebeneran berita dengan kecerdasan buatan!"
-            link="/"
+            link="/hoax"
         />
     </main>
   </NuxtLayout>

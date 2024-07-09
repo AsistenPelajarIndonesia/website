@@ -17,7 +17,7 @@ const layout = "basic"
             photo="/Milarian Jawaban.png"
             subheading="Mencari Jawaban" 
             description="Kesulitan menemukan jawaban? Yuk kita temukan dengan kecerdasan buatan yang terkoneksi dengan Buku Paket!" 
-            link="/"
+            link="/milarian-jawaban"
         />
 
     </main>
