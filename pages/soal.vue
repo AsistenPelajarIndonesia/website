@@ -96,7 +96,7 @@ async function displayQuestions() {
     showed_answer.value = false
 }
 async function getQuestions() {
-    return await $fetch(`https://ext.lakm.us:8080/api/v2/soal/${topic.value}/${questionCount.value}/${selectedLanguage.value.label}`)
+    return await $fetch(`https://rework-production.up.railway.app/soal/${topic.value}/${questionCount.value}/${selectedLanguage.value.label}`)
 }
 
 const layout = "basic";

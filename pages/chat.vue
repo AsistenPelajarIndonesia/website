@@ -26,7 +26,7 @@
         this.messages.push(newMessage);
   
         // Simulate an API call
-        const response = await $fetch(`https://ext.lakm.us:8080/api/v2/ai21/${message}`)
+        const response = await $fetch(`https://rework-production.up.railway.app/ai21/${message}`)
   
         const data = response;
         const botMessage = { sender: 'bot', text: data };
