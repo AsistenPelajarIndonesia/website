@@ -1,6 +1,6 @@
 <template>
     <NuxtLayout :name="layout">
-        <iframe src="https://chatsv2-production.up.railway.app/Milarian_Jawaban" frameborder="0"></iframe>
+        <iframe src="https://echat.up.railway.app/Milarian_Jawaban" frameborder="0"></iframe>
     </NuxtLayout>
 </template>
 
